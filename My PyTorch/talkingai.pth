@@ -1,0 +1,9 @@
+import torch
+sentence = "This is my first talking."
+ascii_values = [ord(char) for char in sentence]
+# 将ASCII值转换为张量
+tensor = torch.tensor(ascii_values)
+# 解码回字符
+decoded_sentence = ''.join([chr(item.item()) for item in tensor])
+# 输出
+print(decoded_sentence)
